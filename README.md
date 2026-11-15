@@ -1,6 +1,6 @@
 # Awesome-Event-Management-Ticketing
 
-# Top Event Management & Ticketing Ecosystem
+## Top Event Management & Ticketing Ecosystem
 
 **Curated List of SaaS Platforms & Open-Source GitHub Projects**  
 *Focused on Ticket Sales, Attendee Check-in & Self-Hosted Event Platforms*  
