@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#070a12" />
+    </linearGradient>
+
+    <!-- Glowing Accents -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.65" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Drop Shadows and Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="14" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.3" />
+      <circle cx="40" cy="40" r="1.5" fill="#6366f1" fill-opacity="0.35" />
+    </pattern>
+
+    <style>
+      .text-title {
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 46px;
+        fill: #ffffff;
+        letter-spacing: -1px;
+      }
+      .text-subtitle {
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        fill: #94a3b8;
+        letter-spacing: 0.2px;
+      }
+      .pill-text {
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        fill: #e2e8f0;
+      }
+      .badge-text {
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        font-size: 11px;
+        fill: #38bdf8;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+      }
+
+      /* CSS Keyframe Animations */
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-10px) rotate(1.5deg); }
+      }
+      @keyframes floatReverse {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(10px) rotate(-1.5deg); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.45; transform: scale(1); }
+        50% { opacity: 0.75; transform: scale(1.08); }
+      }
+      @keyframes scanDash {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: 60; }
+      }
+
+      .floating-card-1 {
+        animation: floatSlow 7s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .floating-card-2 {
+        animation: floatReverse 8s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .orb-glow {
+        animation: pulseGlow 5s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .flow-line {
+        stroke-dasharray: 8 6;
+        animation: scanDash 3s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="420" fill="url(#bgGradient)" rx="16" />
+  <rect width="1200" height="420" fill="url(#grid)" rx="16" />
+
+  <!-- Dynamic Glowing Orbs in Deep Background -->
+  <g class="orb-glow">
+    <circle cx="200" cy="100" r="140" fill="#6366f1" opacity="0.25" filter="url(#glow)" />
+    <circle cx="1020" cy="220" r="160" fill="#ec4899" opacity="0.22" filter="url(#glow)" />
+    <circle cx="650" cy="350" r="110" fill="#06b6d4" opacity="0.2" filter="url(#glow)" />
+  </g>
+
+  <!-- Dynamic Flow Connector Curves in Background -->
+  <g opacity="0.6">
+    <path class="flow-line" d="M 120 280 C 250 200, 400 360, 600 240 C 800 120, 950 320, 1100 220" fill="none" stroke="url(#primaryGrad)" stroke-width="2.5" />
+    <path class="flow-line" d="M 80 140 C 300 100, 500 220, 750 160 C 950 100, 1050 260, 1140 180" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-opacity="0.5" />
+  </g>
+
+  <!-- Interactive Floating Mock Cards (Right Side Visuals) -->
+  <g class="floating-card-1">
+    <!-- Ticket Preview Card -->
+    <g transform="translate(820, 65)" filter="url(#cardShadow)">
+      <rect width="310" height="155" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2" />
+      <rect x="0" y="0" width="8" height="155" rx="4" fill="url(#primaryGrad)" />
+      
+      <!-- Card Header -->
+      <circle cx="35" cy="35" r="14" fill="#6366f1" fill-opacity="0.3" />
+      <path d="M 28 35 L 42 35 M 35 28 L 35 42" stroke="#818cf8" stroke-width="2" stroke-linecap="round" />
+      <text x="60" y="32" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">TECH SUMMIT 2026</text>
+      <text x="60" y="48" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94a3b8">VIP ACCESS PASS #0482</text>
+      
+      <!-- Card Divider -->
+      <line x1="25" y1="68" x2="285" y2="68" stroke="#334155" stroke-width="1" stroke-dasharray="4 4" />
+      
+      <!-- Card Body Info -->
+      <text x="30" y="94" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">ORGANIZER</text>
+      <text x="30" y="110" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#cbd5e1">Open-Source Ops</text>
+      
+      <text x="175" y="94" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">PRICE</text>
+      <text x="175" y="110" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#10b981">$0 (Self-Hosted)</text>
+
+      <rect x="30" y="124" width="70" height="20" rx="6" fill="#10b981" fill-opacity="0.2" />
+      <text x="65" y="138" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#34d399" text-anchor="middle">VERIFIED</text>
+      
+      <!-- Mini QR Icon -->
+      <rect x="235" y="85" width="48" height="48" rx="6" fill="#0f172a" stroke="#6366f1" stroke-width="1" />
+      <path d="M 243 93 h 12 v 12 h -12 z M 261 93 h 14 v 6 h -14 z M 243 111 h 8 v 14 h -8 z M 257 107 h 18 v 18 h -18 z" fill="#38bdf8" />
+    </g>
+  </g>
+
+  <g class="floating-card-2">
+    <!-- Platform Performance Pill Card -->
+    <g transform="translate(850, 245)" filter="url(#cardShadow)">
+      <rect width="280" height="120" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2" />
+      <rect x="0" y="0" width="8" height="120" rx="4" fill="#06b6d4" />
+      
+      <text x="25" y="32" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#06b6d4" letter-spacing="1">LIVE CHECK-IN SYNC</text>
+      
+      <!-- Progress Bar Graph -->
+      <rect x="25" y="48" width="230" height="8" rx="4" fill="#334155" />
+      <rect x="25" y="48" width="186" height="8" rx="4" fill="url(#primaryGrad)" />
+      
+      <text x="25" y="80" font-family="system-ui, sans-serif" font-size="18" font-weight="800" fill="#ffffff">4,850 / 6,000</text>
+      <text x="25" y="98" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94a3b8">Attendees Scanned (80.8%)</text>
+      
+      <circle cx="235" cy="85" r="16" fill="#10b981" fill-opacity="0.2" />
+      <polyline points="228,85 233,90 243,79" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+  </g>
+
+  <!-- Foreground Main Branding & Typography -->
+  <g transform="translate(75, 75)">
+    <!-- Category Pill Badge -->
+    <rect x="0" y="0" width="220" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+    <circle cx="16" cy="14" r="5" fill="#38bdf8" />
+    <text x="32" y="18" class="badge-text">CURATED ECOSYSTEM 2026</text>
+
+    <!-- Main Title (Gradient Accent) -->
+    <text x="0" y="78" class="text-title">
+      Awesome Event Management
+    </text>
+    <text x="0" y="132" class="text-title" fill="url(#primaryGrad)">
+      &amp; Ticketing Platforms
+    </text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="0" y="178" class="text-subtitle">
+      Enterprise SaaS Suites &bull; Battle-Tested Open Source &bull; Zero-Fee Self-Hosting
+    </text>
+
+    <!-- Feature Pills in Foreground -->
+    <g transform="translate(0, 215)">
+      <!-- Pill 1: Ticketing -->
+      <g>
+        <rect x="0" y="0" width="145" height="36" rx="18" fill="#1e293b" stroke="#475569" stroke-width="1" />
+        <circle cx="18" cy="18" r="6" fill="#ec4899" />
+        <text x="34" y="23" class="pill-text">Ticket Sales</text>
+      </g>
+      <!-- Pill 2: Check-in -->
+      <g transform="translate(155, 0)">
+        <rect x="0" y="0" width="165" height="36" rx="18" fill="#1e293b" stroke="#475569" stroke-width="1" />
+        <circle cx="18" cy="18" r="6" fill="#6366f1" />
+        <text x="34" y="23" class="pill-text">QR Door Check-In</text>
+      </g>
+      <!-- Pill 3: Self-Hosting -->
+      <g transform="translate(330, 0)">
+        <rect x="0" y="0" width="160" height="36" rx="18" fill="#1e293b" stroke="#475569" stroke-width="1" />
+        <circle cx="18" cy="18" r="6" fill="#10b981" />
+        <text x="34" y="23" class="pill-text">Self-Hosted Tools</text>
+      </g>
+      <!-- Pill 4: Zero Fees -->
+      <g transform="translate(500, 0)">
+        <rect x="0" y="0" width="155" height="36" rx="18" fill="#1e293b" stroke="#475569" stroke-width="1" />
+        <circle cx="18" cy="18" r="6" fill="#06b6d4" />
+        <text x="34" y="23" class="pill-text">Direct Stripe Payout</text>
+      </g>
+    </g>
+  </g>
+</svg>
