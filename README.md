@@ -124,7 +124,7 @@ We welcome additions, updates, and corrections from event creators, developers, 
 3. 📝 Add or update the platform in the appropriate table in `README.md`.
    - Maintain the specified table columns and descending sorting rules.
    - For SaaS tools, provide verifiable starting pricing tiers and exact free tier/trial boundaries.
-   - For open-source tools, include the proper GitHub Stars_Badge link: `[![Name](https://img.shields.io/github/stars/<owner>/<repo>?style=social&color=white)](https://github.com/<owner>/<repo>/stargazers)`.
+   - For open-source tools, include the proper GitHub_Stars_Badge link: `[![Name](https://img.shields.io/github/stars/<owner>/<repo>?style=social&color=white)](https://github.com/<owner>/<repo>/stargazers)`.
 4. 💾 Commit your changes: `git commit -m "Add <Platform Name> to Awesome Event Management"`.
 5. 🚀 Push to your branch and open a Pull Request.
 
