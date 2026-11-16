@@ -193,7 +193,7 @@
 
     <!-- Subtitle / Tagline -->
     <text x="0" y="178" class="text-subtitle">
-      Enterprise SaaS Suites &bull; Battle-Tested Open Source &bull; Zero-Fee Self-Hosting
+      Enterprise SaaS Suites &#8226; Battle-Tested Open Source &#8226; Zero-Fee Self-Hosting
     </text>
 
     <!-- Feature Pills in Foreground -->
