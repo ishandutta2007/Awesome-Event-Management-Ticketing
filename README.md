@@ -80,7 +80,7 @@ Open-source event software gives organizations complete ownership of attendee da
 
 The table below is sorted in descending order by GitHub stargazer count. Each social badge links directly to that repository's stargazers page.
 
-| Project & Repo Link | Star Count | Architecture & Stack | Key Features & Focus |
+| Project & Repo Link | Stars_Count | Architecture & Stack | Key Features & Focus |
 |---|---|---|---|
 | **[Attendize](https://github.com/Attendize/Attendize)** | [![Attendize Stars](https://img.shields.io/github/stars/Attendize/Attendize?style=social&color=white)](https://github.com/Attendize/Attendize/stargazers) | PHP / Laravel + MySQL | Mature self-hosted ticket sales and door management engine. Features custom responsive event pages, multiple ticket classes, QR-code ticket generation, integrated web-based barcode scanner for check-in staff, affiliate tracking links, and direct Stripe/PayPal gateway integration. |
 | **[Hi.Events](https://github.com/HiEventsDev/Hi.Events)** | [![Hi.Events Stars](https://img.shields.io/github/stars/HiEventsDev/Hi.Events?style=social&color=white)](https://github.com/HiEventsDev/Hi.Events/stargazers) | PHP / Laravel + React + PostgreSQL + Docker | Modern alternative to Eventbrite and Ticket Tailor. Multi-tenant architecture designed for agencies and organizations. Features phone-camera QR check-in, tiered pricing, donation ticketing, capacity waitlists, tax/invoice generation, direct Stripe Connect (zero platform fees), and full REST APIs/webhooks. |
@@ -124,7 +124,7 @@ We welcome additions, updates, and corrections from event creators, developers, 
 3. 📝 Add or update the platform in the appropriate table in `README.md`.
    - Maintain the specified table columns and descending sorting rules.
    - For SaaS tools, provide verifiable starting pricing tiers and exact free tier/trial boundaries.
-   - For open-source tools, include the proper GitHub star badge link: `[![Name](https://img.shields.io/github/stars/<owner>/<repo>?style=social&color=white)](https://github.com/<owner>/<repo>/stargazers)`.
+   - For open-source tools, include the proper GitHub Stars_Badge link: `[![Name](https://img.shields.io/github/stars/<owner>/<repo>?style=social&color=white)](https://github.com/<owner>/<repo>/stargazers)`.
 4. 💾 Commit your changes: `git commit -m "Add <Platform Name> to Awesome Event Management"`.
 5. 🚀 Push to your branch and open a Pull Request.
 
